@@ -3,3 +3,8 @@ function Get-ExternalMessage {
 }
 
 Export-ModuleMember -Function Get-ExternalMessage
+function Get-ExternalVersion {
+    return "v2"
+}
+
+Export-ModuleMember -Function Get-ExternalVersion

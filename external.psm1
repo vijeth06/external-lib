@@ -6,4 +6,8 @@ function Get-ExternalVersion {
     return "v2"
 }
 
-Export-ModuleMember -Function Get-ExternalMessage, Get-ExternalVersion
+function Get-ExternalStatus {
+    return "external-lib is updated and synced"
+}
+
+Export-ModuleMember -Function Get-ExternalMessage, Get-ExternalVersion, Get-ExternalStatus

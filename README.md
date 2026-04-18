@@ -1,14 +1,24 @@
 # External Library
 
-This repository is an external dependency consumed by the main project via a
-Git submodule.
+This repository provides the core PowerShell module used by `main-project` via
+Git submodule integration.
 
-## Exposed Functions
+## Exported Functions
 
-- `Get-ExternalMessage`: returns a sample message.
-- `Get-ExternalVersion`: returns the module version string.
+- `Get-ExternalMessage` -> returns a sample library message
+- `Get-ExternalVersion` -> returns module version string
+- `Get-ExternalStatus` -> returns submodule status text
 
-## Why This Repository Exists
+## Usage
+
+```powershell
+Import-Module .\external.psm1 -Force
+Get-ExternalMessage
+Get-ExternalVersion
+Get-ExternalStatus
+```
+
+## Purpose
 
 It simulates a separately maintained component so the main project can pin a
 specific commit through submodule tracking.
